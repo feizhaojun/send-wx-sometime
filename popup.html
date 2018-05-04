@@ -1,0 +1,36 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hua Zhi</title>
+    <style>
+      body{
+        min-width:300px;
+        min-height:200px;
+      }
+      span.error{color:#f00;}
+      span.success{color:green;}
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="setting">
+      <input type="text" name="send-time" id="send-time" />
+      <input type="button" name="" id="set-time" value="设置" />
+    </div>
+    <div id="notice"></div>
+  </body>
+</html>
+
